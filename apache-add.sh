@@ -33,7 +33,7 @@ echo "Creating apache config $1.conf and dirs"
 
 if [ ! -d /var/www/$1/htdocs ];then
   mkdir -p /var/www/$1/htdocs
-  chown -R $2.apache /var/www/$1/htdocs
+  chown -R $2.www-data /var/www/$1/htdocs
   chmod g+s /var/www/$1/htdocs
 else
   echo "directories already exist - creating config only"
